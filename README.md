@@ -1,3 +1,5 @@
+Personal blog created with Jekyll-Bootstrap. See JB docs below:
+
 # Jekyll-Bootstrap
 
 The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
