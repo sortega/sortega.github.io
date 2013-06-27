@@ -376,6 +376,7 @@ pre > code {
 /* @group Disqus */
 #disqus_thread {
 	margin-top: 2.93em;
+	padding-top: 1em;
 }
 .dsq-comment-body {
 	text-align: justify;
