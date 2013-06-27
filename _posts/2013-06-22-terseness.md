@@ -63,11 +63,11 @@ opinion, we can be more precise by looking at the code from different angles:
    with `new ArrayList<String>(Arrays.asList(x))`.
 
  * When functions are first class and you can create functions literals
-   cheaply and pass them as arguments lots of common collection manipulation
+   cheaply and pass them as arguments, lots of common collection manipulation
    patterns can be abstracted and reused.  For example, removing the
    honorifics is implemented with a conditional that removes elements of a
-   collection is the Java version while a simple `dropWhile(isHonorific)` can
-   do the job.
+   collection in the Java version. A simple `dropWhile(isHonorific)` can
+   do the job in Scala.
 
  * Pattern matching is used in `swapFirstAndLast` (`NameInverter.scala:8`) to
    *deconstruct* the list in two ways (first-second-rest and any-other-list)
