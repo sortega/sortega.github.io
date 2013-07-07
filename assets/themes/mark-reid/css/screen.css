@@ -553,6 +553,14 @@ img.maruku-png { }
 	border:1px solid #4C964D;
 	color:#FFF;
 }
+.social_box {
+        float: right;
+        margin: 10px 0 0 0;
+	padding: 2px 0 0 2px;
+	background: #eef;
+	border-radius: 3px;
+	border:1px dashed #ccc;
+}
 
 /* Better styles for embedding GitHub Gists */
 .gist{font-size:13px;line-height:18px;margin-bottom:20px;width:100%}

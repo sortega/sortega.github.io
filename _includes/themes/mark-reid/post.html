@@ -1,6 +1,7 @@
 <div id="page">
 	
   <h1 class="emphnext">{{ page.title }}</h1>
+  <div class="social_box">{% include JB/sharing %}</div>
   <ul class="tag_box inline">
   {% assign tags_list = page.tags %}
   {% include JB/tags_list %}
