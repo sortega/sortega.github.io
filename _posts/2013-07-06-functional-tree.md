@@ -9,7 +9,7 @@ tags: [fp, kata, books]
 
 Recently, a group of coworkers and me have published [a book][historias] on
 various themes around development very much in the style of the famous 97
-Things Every Programmer Should Know (available as [a wiki][97things])) but in
+Things Every Programmer Should Know (available as [a wiki][97things]) but in
 Spanish and with longer chapters.
 
 One of the chapters accounts for a programming exercise that was proposed just
