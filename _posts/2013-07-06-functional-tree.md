@@ -2,7 +2,7 @@
 layout: post
 title: "Functional trees"
 description: ""
-category: programming
+category: development
 tags: [fp, kata, books]
 ---
 {% include JB/setup %}
