@@ -2,7 +2,7 @@
 layout: post
 title: "When to pair"
 author: sortega
-description: "A couple of thought on when to pair"
+description: "A couple of thoughts on when to pair"
 category: peopleware
 tags: [practices, patterns]
 ---
