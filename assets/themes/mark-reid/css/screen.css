@@ -34,7 +34,7 @@ img { -ms-interpolation-mode:bicubic; }
 html>body { font-size:16px; }
 p { margin: 0 0 1.5em 0; text-align: justify; }
 
-a { text-decoration: none; color: #339; }
+a { text-decoration: none; color: #339; font-weight: bold; }
 a:hover { text-decoration: underline; color: #33f; }
 a.pdf:before { 
 	margin-right: 1em;
@@ -568,3 +568,28 @@ img.maruku-png { }
 .gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important}
 .gist-meta a{color:#26a !important;text-decoration:none}
 .gist-meta a:hover{color:#0e4071 !important}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    empty-cells: show;
+    border: 1px solid #CBCBCB;
+    margin: 1ex auto 1em;
+}
+
+thead {
+    background-color: #E0E0E0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+td, th {
+    border-left: 1px solid #CBCBCB;
+    border-width: 0px 0px 0px 1px;
+    font-size: inherit;
+    margin: 0px;
+    overflow: visible;
+    padding: 0.5em 1em;
+}
