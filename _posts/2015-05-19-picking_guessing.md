@@ -25,7 +25,7 @@ please both children and adults.
 
 The problem was proposed in an obscure programmers' mailing list as a
 coding competition in which each participant writes a program to
-play a game in their behalf[^1].
+play a game on their behalf[^1].
 
 The problem was directly inspired by Dixit and Nalebuff's book
 *[The art of the strategy][art]*. Within the book ([read that part][excerpt])
