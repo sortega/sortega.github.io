@@ -8,15 +8,15 @@ tags: [java, scala, fp]
 ---
 {% include JB/setup %}
 
-Martin Odersky claims in his book *Programming in Scala*[^scala] that Scala
-is terser than Java. Practice confirms this claim as comparable listings tend
-to be half or a third of what you need on Java (but your mileage can vary).
+Martin Odersky claims in his book *Programming in Scala*[^scala] that Scala is
+terser than Java. Practice confirms this claim as comparable listings tend to
+be a half or a third of what you need on Java (but your mileage may vary).
 
-Let's look at an example to try to find out what is the cause of such big
-measure difference.  The following code is the result of a TDD tutorial by
-Uncle Bob[^cc] consisting in creating name-inverter function able to discard
-honorifics (e.g. Mr. or Ms.), retain post-nominals and cover several border
-cases.  For example, we should get `Odersky, Martin` from `Martin Odersky`.
+Let's look at an example to find out what is the cause of such big difference.
+The following code is the result of a TDD tutorial by Uncle Bob[^cc]
+consisting in creating a name-inverter function able to discard honorifics
+(e.g.  Mr. or Ms.), retain post-nominals and cover several border cases.  For
+example, we should get `Odersky, Martin` from `Martin Odersky`.
 
 This is the production code followed by the list of test cases:
 
@@ -27,37 +27,38 @@ Scala and ScalaTest instead of Java and JUnit I got the following result:
 
 <script src="https://gist.github.com/sortega/5841506.js"> </script>
 
-Effectively, line counts meets the expectations.  This is explained in Odersky
-book by simply stating that Scala is *higher-level* than Java but, in my
-opinion, we can be more precise by looking at the code from different angles:
+Line counts meets our expectations.  This is explained in Odersky's book by
+simply stating that Scala is *higher-level* than Java but, in my opinion, we
+can be more precise by looking at the code from different angles:
 
- * In Java, it is common to pass `null` when a value is missing, that forces
-   to defensively code null checks all over the place as it is motivated by
-   the first test case of the Java version.  In Scala, the ubiquitous use of
-   the `Optional` type for this purpose make this unnecessary.  This removes a
-   test case and a conditional for free!
+ * In Java, it is common to pass `null` when a value is missing. That forces
+   defensive code with
+   [null checks all over the place](/development/2013/07/13/nullitis/) as it
+   is motivated by the first test case of the Java version.  In Scala, the
+   ubiquitous use of the `Option` type for this purpose make this unnecessary.
+   This removes a test case and a conditional for free!
 
  * Both JUnit and ScalaTest are internal DSLs with the advantage of not
    needing a different compiler than the production code and the inconvenience
-   of needing to accommodate to the host language syntax.  As Scala offers lots
-   of configurable syntax sugar such as implicit conversions, operators, infix
+   of abusing the host language syntax.  Since Scala offers lots of
+   configurable syntax sugar such as implicit conversions, operators, infix
    notation and so on, the results are much more terse.  The JUnit version
    encodes each test case into a method annotated with `@Test` while ScalaTest
    leverages higher-order functions to define the test cases.
 
  * All exceptions are unchecked in Scala so there is no need but API
-   documentation to use them.  This adds some noise to the JUnit version that
-   needs to accept any exceptions to maximize test independence.
+   documentation to annotate them.  This adds some noise to the JUnit version
+   that needs to accept any exceptions to maximize test independence.
 
- * Primitives and Objects are two different kinds of animals in Java, being
+ * Primitives and objects are two different kinds of animals in Java, being
    the former second class citizens unable to participate on all the things
    that the latter can.  For instance, you cannot create a `List<int>` you
-   should use a wrapper class and end with `List<Int>`.
+   should use a wrapper class for primitives, `List<Integer>`.
 
    More relevant to the code we are studying, primitive arrays are not part of
    the collections framework and conversions as cumbersome and wordy as you
    can see in `splitNames` (`NameInverter.java:50`).  Scala designers pushed
-   for a unified class hierarchy and collections framework in which all the
+   for a unified class hierarchy and collection framework in which all the
    types can play all the roles.  Such uniformity promotes orthogonality and
    you need to type `toList` no matter what collection you start with. Compare
    with `new ArrayList<String>(Arrays.asList(x))`.
@@ -106,16 +107,11 @@ just by allowing for easier composition of more versatile modules.  Richer
 means of abstraction allow for terser code as you don't need to deal with
 irrelevant details such as looping a list to selecting some elements.
 
-In my opinion the Java-Scala contrast is a wonderful setting for measuring
-the relative merits of the functional-language features that are slowly
-pouring into the mainstream.
+In my opinion the Java-Scala contrast is a wonderful setting for measuring the
+relative merits of the functional-language features that are slowly pouring
+unto the mainstream.
 
 
-[^scala]: Programming in Scala, Odersky et al, artima.
-[Available at Amazon.](http://www.amazon.com/Programming-Scala-Comprehensive-Step-Step/dp/0981531644)
-[^cc]: *Clean Code Episode 19, Part I: Advanced TDD*
-   <http://www.cleancoders.com/codecast/clean-code-episode-19-p1/show>
-   The whole video series is very interesting and funny to watch!
-[^sicp]: *Structure and Interpretation of Computer Programs*,
-   Abelson, H. and Sussman, G.J. Full text for free at
-   <http://mitpress.mit.edu/sicp/>
+[^scala]: Programming in Scala, Odersky et al, Artima. [Available at Amazon.](http://www.amazon.com/Programming-Scala-Comprehensive-Step-Step/dp/0981531644)
+[^cc]: *Clean Code Episode 19, Part I: Advanced TDD* <http://www.cleancoders.com/codecast/clean-code-episode-19-p1/show> The whole video series is very interesting and funny to watch!
+[^sicp]: *Structure and Interpretation of Computer Programs*, Abelson, H. and Sussman, G.J. Full text for free at <http://mitpress.mit.edu/sicp/>
