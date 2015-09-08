@@ -46,3 +46,25 @@
 .related-post-title {
   border-bottom: thin solid #f3f3f3;
 }
+
+.footnotes {
+    margin-top: 2em;
+}
+
+.footnotes:before {
+  content: "Footnotes:";
+  border-top: 1px solid black;
+  min-width: 10em;
+  font-size: 90%;
+  padding: 1ex 6em 1em 0;
+  position: relative;
+  top: -1ex;
+}
+
+.footnotes p,
+.footnotes dl,
+.footnotes ol,
+.footnotes ul {
+  font-size: 90%;
+  color: #aaa;
+}

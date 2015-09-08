@@ -1,19 +1,21 @@
 ---
 layout: page
-title: About Pixyll
+title: About this blog
 permalink: /about/
 ---
 
-This Jekyll theme was crafted with <3 by [John Otander](http://johnotander.com)
-([@4lpine](https://twitter.com/4lpine)).
+<img src="/assets/about/me.jpg" alt="My ugly face"
+     style="float: right; width: 8em; margin: 0 0 1em 1em; border-radius: 4em">
 
-Checkout the [Github repository](https://github.com/johnotander/pixyll) to download it,
-request a feature, report a bug, or contribute. It's free, and open source
-([MIT](http://opensource.org/licenses/MIT)).
+Thanks for taking a look at my blog. I'm Sebastián Ortega a vocational
+computer engineer and I really enjoy crafting software.
 
-Thanks to the following:
+Here you can find random ramblings related with development and contiguous
+subjects.
 
-* [BASSCSS](http://basscss.com)
-* [Jekyll](http://jekyllrb.com)
-* [Refills](http://refills.bourbon.io/)
-* [Type Scale](http://type-scale.com/)
+You can contact me on [twitter](https://twitter.com/_sortega) or by commenting
+any of the posts.
+
+This blog is powered by Jekyll and styled with the
+[pixyll](https://github.com/johnotander/pixyll) theme by [John
+Otander](http://johnotander.com).
