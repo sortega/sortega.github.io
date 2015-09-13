@@ -114,7 +114,7 @@ strategies. In both cases, every player was matched against each other 20k
 times (10k as guesser, 10k as picker) to tame the inherent randomness of the
 game.
 
-What would you would have implemented? How moving from isolated matches to
+What would you have implemented? How moving from isolated matches to
 sequential ones whould have changed your strategy? More on this in the next
 post.
 
