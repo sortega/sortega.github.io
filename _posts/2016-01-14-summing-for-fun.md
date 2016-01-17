@@ -14,7 +14,7 @@ get asked by people that can't tell apart code from magic spells.
 However, what intrigues me the most are the nonsensical "technical"
 questions made by allegedly technical interviewers.
 
-Recentrly, some friend of mine got asked to implement in any
+Recently, some friend of mine got asked to implement in any
 programming language a function summing a sequence of floating point
 numbers. The catch? You should implement at least 10 versions and they
 should be as different as possible.
