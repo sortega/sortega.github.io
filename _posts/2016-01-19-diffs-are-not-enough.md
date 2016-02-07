@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Diffs are not enouggh"
+title: "Diffs are not enough"
 summary: "Ruminations after being at a JT tech talk"
 category: development
 tags: [practices, tools, swift]
