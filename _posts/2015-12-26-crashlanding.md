@@ -91,11 +91,11 @@ remained inscrutable for hours.
 [pry]: http://pryrepl.org/
 [francesc]: https://twitter.com/francesc_pla
 
-Did I finally give up on the test and implemented the change right away? Nope.
-At some point I realized that the magically disappearing part of the query had
-`"should"` as key. If you are familiar with Jquery, you will know that it is a
-DSL based on dynamic methods in which whatever you call gets transformed in
-the attributes of a JSON.
+Did I finally give up on the test and implemented the change right
+away? Nope.  At some point I realized that the magically disappearing
+part of the query had `"should"` as key. If you are familiar with
+Jbuilder, you will know that it is a DSL based on dynamic methods in
+which whatever you call gets transformed in the attributes of a JSON.
 
     Jbuilder.new do |company|
       company.name name
