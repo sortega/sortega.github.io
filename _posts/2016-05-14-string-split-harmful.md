@@ -154,9 +154,9 @@ def split(text: String): List[String] =
 {% endhighlight %}
 
 This time the tests pass (no counterexample found) and we have more confidence
-on our code supporting the property we initially were assuming. But more
-importantly, we have learned how pernicious `String.split` is. Avoid it
-and be very suspicious of any code review in which it shows up.
+on our code supporting the property we initially were assuming. We have learned
+how pernicious `String.split` is. Avoid it and be very suspicious of any code
+review in which it shows up.
 
 <div style="margin: 1em 0; text-align: center">
     <img src="/assets/split/dijkstra_split.jpg"
@@ -164,8 +164,15 @@ and be very suspicious of any code review in which it shows up.
         style="width: 80%"/>
 </div>
 
-One last thing. Property based testing is nice for properties that escape static
-analysis but we are better off when we can rely on the compiler/linter.
+But we have learned something way more valuable through this (contrived)
+example: property based testing is a bridge between informal reasoning
+understanding and testing-based understanding. **We enhance our reasoning thanks
+to a property that is "verified" through testing**.
+
+Note the quotes in "verified". We cannot exhaustively check all inputs in the
+general case so we are highly confident but not this-is-proven confident. This
+is nice for properties that escape static analysis but we are better off when we
+can rely on the compiler or linter.
 
 <blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">If only there were a way for a computer to check that objects have the expected type ... <a href="https://t.co/aCYz9Z3M0Q">https://t.co/aCYz9Z3M0Q</a></p>&mdash; Computer Science (@CompSciFact) <a href="https://twitter.com/CompSciFact/status/730769733092544512">May 12, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
