@@ -33,7 +33,7 @@ the object-oriented style:
 [perlis]: https://en.wikipedia.org/wiki/Alan_Perlis
 
 In fact, one problem of having rich object models with many classes is that we
-lost the leverage that many functions operating on a single type could bring us.
+lose the leverage that many functions operating on a single type could bring us.
 The standard OO tool for this problem is the polymorphism. A single method call
 (declared in an interface or by duck typing) can be directed to many different
 implementations. In this spirit, Rich Hickey updated the old Perlis idea
