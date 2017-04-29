@@ -1,0 +1,34 @@
+digraph {
+  rankdir=LR;
+
+  start[shape=doublecircle];
+  start -> healthy [label="0.6"];
+  start -> fever   [label="0.4"];
+
+  subgraph cluster_0 {
+    rankdir=LR;
+    label="States";
+
+    healthy;
+    fever;
+
+    healthy -> healthy [label="0.7"];
+    healthy -> fever [label="0.3"];
+    fever -> healthy [label="0.4"];
+    fever -> fever [label="0.6"];
+  }
+
+  subgraph cluster_1 {
+    label="Symptoms";
+
+    normal, cold, dizzy;
+  }
+
+  healthy -> normal [label=0.5];
+  healthy -> cold [label=0.4];
+  healthy -> dizzy [label=0.1];
+
+  fever -> normal [label=0.1];
+  fever -> cold [label=0.3];
+  fever -> dizzy [label=0.6];
+}

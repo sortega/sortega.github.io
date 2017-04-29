@@ -1,0 +1,45 @@
+digraph {
+  rankdir=LR;
+
+  start[shape=doublecircle];
+  start -> healthy [label="0.5"];
+  start -> incubating [label="0.4"];
+  start -> ill [label="0.1"];
+
+  subgraph cluster_0 {
+    rankdir=LR;
+    label="States";
+
+    healthy;
+    incubating;
+    ill;
+
+    healthy -> healthy [label="0.9"];
+    healthy -> incubating [label="0.1"];
+
+    incubating -> healthy [label="0.1"];
+    incubating -> incubating [label="0.6"];
+    incubating -> ill [label="0.3"];
+
+    ill -> healthy [label="0.2"];
+    ill -> ill [label="0.8"];
+  }
+
+  subgraph cluster_1 {
+    label="Symptoms";
+
+    normal, low_fever, high_fever;
+  }
+
+  healthy -> normal [label=0.95];
+  healthy -> low_fever [label=0.04];
+  healthy -> high_fever [label=0.01];
+
+  incubating -> normal [label=0.6];
+  incubating -> low_fever [label=0.35];
+  incubating -> high_fever [label=0.05];
+
+  ill -> normal [label=0.05];
+  ill -> low_fever [label=0.2];
+  ill -> high_fever [label=0.75];
+}
