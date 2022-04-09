@@ -48,7 +48,9 @@ at blazingly fast rates. This poses the problem of how to get a fast and large m
     </tbody>
 </table>
 
-This is solved in computer architecture by the interplay of two ideas: a **memory hierarchy** and **virtual memory**. The [memory hierarchy][mem_hier] consists on a pyramid with the fastest and smallest memories on the tip and slower but bigger ones at the base. This arrangement allow you to have a complete copy of the information at the base, which is the biggest. Then, you can keep copies of the actively used information closer to the pyramid apex for better performance. [Virtual memory][virtual] is the illusion of having a single memory space which is the result of the collaboration of specific hardware (MMU, CPU features) with the operative system to transparently move data across the levels of the pyramid. The result is that, for most purposes and most of the time, programs running in your computer get to use a single memory space that feels as big as the base of the pyramid and almost as fast as its top.
+This is solved in computer architecture by the interplay of two ideas: a **memory hierarchy** and **virtual memory**.
+The [memory hierarchy][mem_hier] consists of a pyramid with the fastest and smallest memories on the tip and slower 
+but bigger ones at the base. This arrangement allows you to have a complete copy of the information at the base, which is the biggest. Then, you can keep copies of the actively used information closer to the pyramid apex for better performance. [Virtual memory][virtual] is the illusion of having a single memory space which is the result of the collaboration of specific hardware (MMU, CPU features) with the operative system to transparently move data across the levels of the pyramid. The result is that, for most purposes and most of the time, programs running in your computer get to use a single memory space that feels as big as the base of the pyramid and almost as fast as its top.
 
 <div style="margin: 1em 0; text-align: center">
     <img src="/assets/cyborg/memory_hierarchy.png" 
@@ -65,7 +67,13 @@ technology or black magic[^magic] to swap the memories of two twin brothers. In 
 
 On the other hand, memories are needed for our minds to work because without them, we will have only the raw input of our senses and no other concept or idea to work with. The extent to which we can understand the world, communicate with others and act depends on using those mental building blocks or [chunks][chunking].
 
-Another aspect of being human not so directly related to information processing is tool making and tool use. Thanks to it, we have come a long way since we harnessed the power of fire and stone. Steve Jobs eloquently explained in [this talk][jobs] how humans will lose in almost all categories[^best] of an Olympic Games in which other animals were allowed to take part. We are not the fastest, we cannot travel the furthest, nor in the most efficient way. However, any cyclist is more efficient in energy per distance than a Condor, the most efficient animal. Then, he declared computers to be like _a bicycle for the mind_. Back then, personal computing was being rolled out, and we were oblivious to the directions these new machines will cybernetically extend us.
+Another aspect of being human not so directly related to information processing is tool making and tool use. Thanks 
+to these, we have come a long way since we harnessed the power of fire and stone. Steve Jobs eloquently explained in 
+[this talk][jobs] how humans will lose in almost all categories[^best] of an Olympic Games in which other animals 
+were allowed to take part. We are not the fastest, we cannot travel the furthest, nor in the most efficient way. 
+However, any cyclist is more efficient in energy per distance than a Condor, the most efficient animal. Then, he 
+declared computers to be like _a bicycle for the mind_. Back then, personal computing was being rolled out, and we 
+were oblivious to the directions these new machines would cybernetically extend us.
 
 ## The Cyborg Memory Hierarchy
 
@@ -86,7 +94,7 @@ Our working memory is composed of a phonological loop, where you can keep repeat
 for pen and paper; the visuo-spatial sketchpad, where you can mentally manipulate shapes; and some very 
 limited number of slots that can hold ideas, or [chunks][chunking], for manipulation. Early George A. Miller work 
 estimated that the typical mind was able to hold 5 &plusmn; 2 chunks[^magic_number], but more recent work suggests we 
-are limited at about 4 chunks.
+are limited to about 4 chunks.
 
 I doubt we will cybernetically extend our working memory until brain-computer interfaces become a reality, but I 
 have some good news in the methodology front. The reason Miller got initially confused with the amount of mental 
@@ -104,7 +112,8 @@ These are memories that we can use fluently, regardless of our smartphone batter
 
 Some of these memories are _declarative_ and can be expressed as answers to explicit questions. "What's the capital of Georgia? [Tbilisi][tbilisi] or Atlanta". We can extend our declarative memories by reading and studying for which there is a wealth of technologies and channels but the main enemy to beat is how fast those new memories fade away from us.
 
-We know thanks to Hermann Ebbinghaus and his tedious self-experimentation with memorizing long sequences of nonsense words that facts decay exponentially in our minds unless reviewed and inter-related to other memories. His work was published in the XIX century, but no specific software was created to optimize when to review which piece of knowledge until Piotr Wozniak wrote the [first spaced repetition software (SRS)][supermemo] in 1987. The underlying idea of this kind of software is that you encode what you have already understood and learned and want to keep in you memory as flash cards (short questions and answers) and the system keeps track of when to do reviews. Due to Ebbinghaus forgetting curve, the interval between reviews grow exponentially, so you see the typical card again after months or years. This means that you can keep many tens of thousands of cards in your level-zero memory at the cost of a few minutes of daily review.
+We know thanks to Hermann Ebbinghaus and his tedious self-experimentation with memorizing long sequences of nonsense 
+words that facts decay exponentially in our minds unless reviewed and inter-related to other memories. His work was published in the XIX century, but no specific software was created to optimize when to review which piece of knowledge until Piotr Wozniak wrote the [first spaced repetition software (SRS)][supermemo] in 1987. The underlying idea of this kind of software is that you encode what you have already understood and learned and want to keep in you memory as flash cards (short questions and answers) and the system keeps track of when to do reviews. Due to Ebbinghaus forgetting curve, the interval between reviews grows exponentially, so you see the typical card again after months or years. This means that you can keep many tens of thousands of cards in your level-zero memory at the cost of a few minutes of daily review.
 
 For a nice explanation of how to implement this with [Anki][anki], one of the most popular SRS nowadays, I recommend reading [Augmenting Long-term Memory][ltm] by Michael Nielsen. He is also experimenting with articles that embed an SRS like [this one][quantum_country] about quantum computing.
 
@@ -122,7 +131,8 @@ These notes are indeed very useful for us to solidify our understanding and orga
 
 However, the value of these notes is limited unless they are connected and easily searchable. To get that extra value we need to up both our methodological and technological games.
 
-The quintessential technology to fill this gap is the personal wiki in which you can seamlessly write notes, keep them inter-linked and securely access this second brain from all your devices. There is an inexhaustible offer of wikis out there ([open source][wikimatrix] and [SaaS][alternatives]). My recommendation is to pick one and try to use it unless blocked by a showstopper. A very common failure more is to keep tuning your wiki configuration without really using it.
+The quintessential technology to fill this gap is the personal wiki in which you can seamlessly write notes, keep 
+them inter-linked and securely access this second brain from all your devices. There is an inexhaustible offer of wikis out there ([open source][wikimatrix] and [SaaS][alternatives]). My recommendation is to pick one and try to use it unless blocked by a showstopper. A very common failure mode is to keep tuning your wiki configuration without really using it.
 
 I personally use [TiddlyWiki][tiddlywiki][^tw] with the amazing Soren's [TiddlyRemember plugin][tiddly_remember] to define SRS cards directly from within my wiki notes. When reviewing them in Anki I get a valuable link to their original context.
 
