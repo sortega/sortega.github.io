@@ -76,7 +76,7 @@ them according to a configuration file written in pseudo-lisp.
        met_a (tap-hold-next-release 200 a lmet)
        alt_s (tap-hold-next-release 200 s lalt)
        sft_d (tap-hold-next-release 200 d lsft)
-       sctl_f (tap-hold-next-release 200 f lctl)
+       ctl_f (tap-hold-next-release 200 f lctl)
    
        ctl_j (tap-hold-next-release 200 j rctl)
        sft_k (tap-hold-next-release 200 k rsft)
